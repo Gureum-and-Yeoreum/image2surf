@@ -42,9 +42,13 @@ function [H] = image2surf(image,bar,h_max,h_min,par)
 % OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-if nargin == 2
+if ~exist('h_max','var')
     h_max = 1;
+end
+if ~exist('h_min','var')
     h_min = 0;
+end
+if ~exist('par','var')
     par = 0;
 end
 
@@ -72,6 +76,7 @@ end
 
 h_ref = linspace(h_max,h_min,size(b,1));
 h_tmp = reshape(c_dif,size(img(:,:,1)));
-H = h_ref(h_tmp);
+H = flipud(h_ref(h_tmp));
+% H = (h_ref(h_tmp));
 
 end
