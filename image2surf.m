@@ -77,6 +77,5 @@ end
 h_ref = linspace(h_max,h_min,size(b,1));
 h_tmp = reshape(c_dif,size(img(:,:,1)));
 H = flipud(h_ref(h_tmp));
-% H = (h_ref(h_tmp));
 
 end
