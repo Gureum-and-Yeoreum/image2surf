@@ -1,5 +1,5 @@
 function [H] = image2surf(image,bar,h_max,h_min,par)
-%
+
 % INPUT: 
 %     image:            image filename to convert to surface
 %     bar:              colorbar of the image
